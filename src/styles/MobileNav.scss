@@ -1,24 +1,87 @@
+@import "../styles/variables.scss";
 
-    .title {
-        color: white;
-        text-transform: uppercase;
-        padding: 0 2rem;
-        font-size: 1.5rem;
-        font-family: 'Antonio', sans-serif;
-        display: flex;
-    }
     .mobileNav {
         position: fixed;
         top: 0;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: solid 1px grey;
+        border-bottom: solid 1px $dark-grey;
         height: 80px;
     }
-    @media screen and (min-width: 700px) {
-        .mobileNav {
-            display: none;
-        }
+    .topbar {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+    .navlink {
+        text-decoration: none;
+    }
+        .title {
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-family: 'Antonio', sans-serif;
+        display: flex;
+        padding: 0 2rem;
+
+    }
+    .hamburger {
+        padding: 0 2rem;
+        color: grey
+    }
+    .menu-container {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    .planet-button {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px $dark-grey;
+        padding: .5rem 0;
+    }
+    .navlink {
+        text-decoration: none;
+        color: $pure-white;
+    }
+    .left-container {
+        display: flex;
+        align-items: center;
+    }
+    .circle {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: grey;
+        margin-right: 1.5rem;
+        border-radius: 50%;
+    }
+    .name {
+        font-family: 'Spartan', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 1.36364px;
+        text-transform: uppercase;
+    }
+    .chevron {
+        width: 3%;
+        height: .8rem;
+    }
+
+
+
+@media screen and (min-width: 700px) {
+    .mobileNav {
+        display: none;
+    }
+}
