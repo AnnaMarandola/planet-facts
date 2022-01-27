@@ -2,9 +2,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 import "../styles/PlanetPage.scss";
-import Navbar from "./Navbar";
 
-const PlanetPage = () => {
+const PlanetPage2 = () => {
   const [view, setView] = useState("overview");
   console.log("view", view);
   let planetInParams = useParams().planet.substring(1);
@@ -16,7 +15,7 @@ const PlanetPage = () => {
   };
   return (
     <div className="planet-page">
-      <div className="top-container">
+      {/* <div className="top-container">
         <div className="image-container">
           {view === "overview" && (
             <img
@@ -101,9 +100,9 @@ const PlanetPage = () => {
           <p className="data">average temp.</p>
           <p className="value">{planetData.temperature}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default PlanetPage;
+export default PlanetPage2;

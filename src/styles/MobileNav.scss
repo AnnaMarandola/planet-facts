@@ -1,0 +1,24 @@
+
+    .title {
+        color: white;
+        text-transform: uppercase;
+        padding: 0 2rem;
+        font-size: 1.5rem;
+        font-family: 'Antonio', sans-serif;
+        display: flex;
+    }
+    .mobileNav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px grey;
+        height: 80px;
+    }
+    @media screen and (min-width: 700px) {
+        .mobileNav {
+            display: none;
+        }
+    }
