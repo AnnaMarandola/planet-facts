@@ -1,114 +1,94 @@
 @import "../styles/variables.scss";
 
+@media screen and (max-width: 700px) {
+    .button {
+        display: none
+        }
+}
+
 .planet-page {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
 }
-
 .top-container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-}
-
-.image-container {
-    width: 65%;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-
+.image-container {
+    display: flex;
+    min-height: 25rem;
+    justify-content: center;
+    align-items: center;    
+}
+.planet-image {
+    width: 50%;
+    z-index: 1;
+}
 .geo-picture {
     display: flex;
     flex-direction: column;
-    width: 40%;
-}
-.planet-image {
-    z-index: 1;
+    align-items: center;
 }
 .geo-img {
     z-index: 2;
-    margin-top: -10rem;
+    margin-top: -8rem;
+    width: 50%
 }
 .right-container {
-    width: 35%;
-    padding: 1rem 0 1rem 2rem;
+    width: 100%;
     .text ,.planet-name {
         color: $pure-white;
     }
     .text {
         font-family: 'Spartan', sans-serif;
         line-height: 2rem;
-        font-size: 1rem;
-        max-width: 25rem;
+        font-size: .8rem;
+        padding: 1rem;
     }
     .planet-name {
         font-family: "Antonio", sans-serif;
         text-transform: uppercase;
-        font-size: 3.5rem;
-        line-height: 3rem;
+        font-size: 2.5rem;
+        line-height: 2rem;
     }
     .description {
         min-height: 20rem;
-
+    }
+    .source {
+        color: $light-grey;
+        padding-left: .5rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .source-icon {
+        padding-left: .5rem;
     }
 }
-.buttons {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 3rem 0;
-    .button {
-        padding: 1.2rem;
-        margin-bottom: 1rem;
-        color: $pure-white;
-        font-weight: 700;
-        line-height: 25px;
-        font-size: 1rem;
-        text-align: start;
-        background-color: transparent;
-        border: solid 1px grey;
-        transition-duration: .4s;
-        text-transform: uppercase;
-        span {
-            color: $light-grey;
-            padding-right: 1rem;
-        }
-    }
-    .button:hover {
-        background-color: $dark-grey;
-        border: solid 1px $dark-grey;
-    }
-    .button:focus {
-        background-color: $turquoise;
-        border: solid 1px $turquoise;
-    }
-
-}
-
 .bottom-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
     height: min-content;
     padding-bottom: 2.4rem;
 }
-
 .info {
-    border: 1px solid $light-grey;
-    padding: .5rem 2rem;
+    border: 1px solid $dark-grey;
+    padding: .5rem 1.5rem;
     min-width: 12rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 1.5rem;
 }
 .data {
     font-family: Spartan;
     font-weight: bold;
     font-size: .7rem;
     line-height: .5rem;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: $pure-white;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
     opacity: 0.5;
@@ -116,10 +96,9 @@
 .value {
     font-family: Antonio;
     font-weight: normal;
-    font-size: 2.2rem;
+    font-size: 1.3rem;
     line-height: .2rem;
-    letter-spacing: -1.5px;
+    letter-spacing: -.5px;
     text-transform: uppercase;
     color: $pure-white;
 }
-
