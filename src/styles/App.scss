@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.app {
+    background-color: $dark-blue;
+    height: 100%;
+    background-image: url("../../public/assets/background-stars.svg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
