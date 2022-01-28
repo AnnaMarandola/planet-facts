@@ -36,12 +36,17 @@ const MobileNav = () => {
                   className="circle"
                   style={{ backgroundColor: `${planet.color}` }}
                 />
-                <Link to={`/:${planet.name}`} className="navlink" key={id} onClick={handleToogle}>
+                <Link
+                  to={`/:${planet.name}`}
+                  className="navlink"
+                  key={id}
+                  onClick={handleToogle}
+                >
                   <p className="name">{planet.name}</p>
                 </Link>
               </div>
               <Link to={`/:${planet.name}`} className="navlink" key={id}>
-                <img src={CHEVRON} alt="chevron" className="chevron" />
+                <img src={CHEVRON} alt="chevron" />
               </Link>
             </div>
           ))}
