@@ -25,6 +25,10 @@
     .planet-image {
         width: 50%;
         z-index: 1;
+        animation-name: planet;
+        animation-duration: 1.8s;
+        animation-timing-function: fade-in;
+
     }
     .geo-picture {
         display: flex;
@@ -35,6 +39,9 @@
         z-index: 2;
         margin-top: -8rem;
         width: 50%;
+        animation-name: planet;
+        animation-duration: 1.8s;
+        animation-timing-function: fade-in;
     }
     .right-container {
         width: 100%;
