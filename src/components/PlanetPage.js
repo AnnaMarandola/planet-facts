@@ -2,34 +2,38 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 import "../styles/PlanetPage.scss";
-import Navbar from "./Navbar";
+import "../styles/InnerNavMobile.scss";
+import SOURCE from "../images/icon-source.svg";
 
-const PlanetPage = () => {
+import InnerNavMobile from "./InnerNavMobile";
+
+const PlanetPage2 = () => {
   const [view, setView] = useState("overview");
-  console.log("view", view);
-  let planetInParams = useParams().planet.substring(1);
-  console.log("params", planetInParams);
-  const planetData = data.find((data) => data.name === planetInParams);
-  console.log("planetData", planetData);
+
   const handleChange = (e) => {
     setView(e.target.value);
   };
+
+  let planetInParams = useParams().planet.substring(1);
+  const planetData = data.find((data) => data.name === planetInParams);
+
   return (
     <div className="planet-page">
+      <InnerNavMobile handleChange={handleChange} />
       <div className="top-container">
         <div className="image-container">
           {view === "overview" && (
             <img
               src={planetData.images.overview}
               alt="mercury planet"
-              className="image"
+              className="planet-image"
             />
           )}
           {view === "structure" && (
             <img
               src={planetData.images.structure}
               alt="mercury structure"
-              className="image"
+              className="planet-image"
             />
           )}
           {view === "geology" && (
@@ -37,7 +41,7 @@ const PlanetPage = () => {
               <img
                 src={planetData.images.overview}
                 alt="mercury planet"
-                className="image"
+                className="planet-image"
               />
 
               <img
@@ -54,19 +58,49 @@ const PlanetPage = () => {
             {view === "overview" && (
               <div className="description">
                 <p className="text">{planetData.overview.content}</p>
-                <p className="text">source: {planetData.overview.source}</p>
+                <a
+                  href={planetData.overview.source}
+                  className="navlink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="text">
+                    source: Wikipedia
+                    <img src={SOURCE} alt="source" className="source-icon" />
+                  </p>
+                </a>
               </div>
             )}
             {view === "structure" && (
               <div className="description">
                 <p className="text">{planetData.structure.content}</p>
-                <p className="text">source: {planetData.structure.source}</p>
+                <a
+                  href={planetData.structure.source}
+                  className="navlink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="text">
+                    source: Wikipedia{" "}
+                    <img src={SOURCE} alt="source" className="source-icon" />
+                  </p>
+                </a>
               </div>
             )}
             {view === "geology" && (
               <div className="description">
                 <p className="text">{planetData.geology.content}</p>
-                <p className="text">source: {planetData.geology.source}</p>
+                <a
+                  href={planetData.geology.source}
+                  className="navlink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="text">
+                    source:<span className="source"> Wikipedia </span>
+                    <img src={SOURCE} alt="source" className="source-icon" />
+                  </p>
+                </a>
               </div>
             )}
           </div>
@@ -106,4 +140,4 @@ const PlanetPage = () => {
   );
 };
 
-export default PlanetPage;
+export default PlanetPage2;
