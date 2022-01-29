@@ -19,8 +19,8 @@ const PlanetPage2 = () => {
 
   useEffect(() => {
     if (currentParam !== planet){
-      window.location.reload()
       setPlanet(currentParam)
+      window.location.reload()
     }
 
   }, [planet,currentParam])
