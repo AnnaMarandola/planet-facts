@@ -11,19 +11,19 @@ import InnerNavMobile from "./InnerNavMobile";
 const PlanetPage2 = () => {
   const [view, setView] = useState("overview");
   const currentParam = useLocation().pathname.substring(2);
-  const [planet, setPlanet] = useState(currentParam);
+  // const [planet, setPlanet] = useState(currentParam);
 
   let planetInParams = useParams().planet.substring(1);
   const planetData = data.find((data) => data.name === planetInParams);
 
 
-  useEffect(() => {
-    if (currentParam !== planet){
-      window.location.reload()
-      setPlanet(currentParam)
-    }
+  // useEffect(() => {
+  //   if (currentParam !== planet){
+  //     window.location.reload()
+  //     setPlanet(currentParam)
+  //   }
 
-  }, [planet,currentParam])
+  // }, [planet,currentParam])
   
   const handleChange = (e) => {
     setView(e.target.value);
