@@ -118,13 +118,13 @@ const PlanetPage2 = () => {
             )}
           </div>
           <div className="buttons">
-            <button className="button" value="overview" onClick={handleChange}>
+            <button className="button" value="overview" style={view === "overview" ? {backgroundColor: planetData.color} : null}  onClick={handleChange}>
               <span>01</span> overview
             </button>
-            <button className="button" value="structure" onClick={handleChange}>
+            <button className="button" value="structure" style={view === "structure" ? {backgroundColor: planetData.color} : null} onClick={handleChange}>
               <span>02</span> internal structure
             </button>
-            <button className="button" value="geology" onClick={handleChange}>
+            <button className="button" value="geology" style={view === "geology" ? {backgroundColor: planetData.color} : null} onClick={handleChange}>
               <span>03</span> surface geology
             </button>
           </div>
