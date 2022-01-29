@@ -239,12 +239,12 @@
 //DESKTOP
 @media screen and (min-width: 1200px) {
     .planet-page {
-        width: 70%;
+        width: 70%; 
     }
 
     .top-container {
         display: flex;
-        margin-top: 80px;
+        margin-top: 65px;
     }
 
     .image-container {
@@ -283,6 +283,7 @@
         .text,
         .planet-name {
             color: $pure-white;
+
         }
         .text {
             font-family: "Spartan", sans-serif;
@@ -314,7 +315,7 @@
             font-size: 1rem;
             text-align: start;
             background-color: transparent;
-            border: solid 1px grey;
+            border: solid 1px $light-grey;
             transition-duration: 0.4s;
             text-transform: uppercase;
             span {
@@ -342,7 +343,7 @@
 
     .info {
         border: 1px solid $dark-grey;
-        padding: 1rem 3rem .5rem 2rem;
+        padding: 1rem 3rem 0 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -360,17 +361,36 @@
         font-family: Antonio;
         font-weight: normal;
         font-size: 1.8rem;
-        line-height: 0.2rem;
-        // letter-spacing: -1.5px;
+        line-height: 1.7rem;
+        // letter-spacing: -.5px;
         text-transform: uppercase;
-        color: $pure-white;
+        color: white;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 1.5s steps(30, end), blink .75s step-end infinite;
     }
 }
 
 
-
 @keyframes planet {
     from {width: 0%}
-    to {width: 50%}
-    
+    to {width: 50%}    
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: $pure-white; 
+    }
 }

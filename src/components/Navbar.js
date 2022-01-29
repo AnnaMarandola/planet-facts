@@ -3,6 +3,7 @@ import "../styles/Navbar.scss";
 import planets from "../data.json";
 
 const Navbar = () => {
+  
   return (
     <div className="navbar">
       <Link to="/" className="navlink">
@@ -10,7 +11,7 @@ const Navbar = () => {
       </Link>
       <div className="nav">
         {planets.map((planet, id) => (
-          <Link to={`/:${planet.name}`} className="navlink" key={id}>
+          <Link to={`/:${planet.name}`} className="navlink" key={id} >
             <li>{planet.name}</li>
           </Link>
         ))}

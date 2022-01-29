@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
+
 import data from "../data.json";
 import "../styles/PlanetPage.scss";
 import "../styles/InnerNavMobile.scss";
@@ -9,11 +10,21 @@ import InnerNavMobile from "./InnerNavMobile";
 
 const PlanetPage2 = () => {
   const [view, setView] = useState("overview");
+  const currentParam = useLocation().pathname.substring(2);
+  const [planet, setPlanet] = useState(currentParam)
 
+  useEffect(() => {
+    if (currentParam !== planet){
+      window.location.reload()
+      setPlanet(currentParam)
+    }
+
+  }, [planet,currentParam])
+  
   const handleChange = (e) => {
     setView(e.target.value);
   };
-
+  
   let planetInParams = useParams().planet.substring(1);
   const planetData = data.find((data) => data.name === planetInParams);
 

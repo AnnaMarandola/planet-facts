@@ -4,6 +4,7 @@ import MobileNav from "./components/MobileNav";
 import Navbar from "./components/Navbar";
 import PlanetPage from "./components/PlanetPage";
 import "./styles/App.scss";
+import planets from "./data.json";
 
 function App() {
   return (
