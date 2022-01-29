@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.scss";
 import planets from "../data.json";
 
@@ -10,9 +10,9 @@ const Navbar = () => {
       </Link>
       <div className="nav">
         {planets.map((planet, id) => (
-          <NavLink to={`/:${planet.name}`} className="navlink" key={id}>
+          <Link to={`/:${planet.name}`} className="navlink" key={id}>
             <li>{planet.name}</li>
-          </NavLink>
+          </Link>
         ))}
       </div>
     </div>
