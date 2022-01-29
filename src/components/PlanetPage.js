@@ -7,6 +7,7 @@ import "../styles/InnerNavMobile.scss";
 import SOURCE from "../images/icon-source.svg";
 
 import InnerNavMobile from "./InnerNavMobile";
+import Navbar from "./Navbar";
 
 const PlanetPage2 = () => {
   const [view, setView] = useState("overview");
@@ -16,23 +17,25 @@ const PlanetPage2 = () => {
   let planetInParams = useParams().planet.substring(1);
   const planetData = data.find((data) => data.name === planetInParams);
 
-
   useEffect(() => {
-    if (currentParam !== planet){
-      setPlanet(currentParam)
-      window.location.reload()
+    if (currentParam !== planet) {
+      setPlanet(currentParam);
+      window.location.reload();
     }
+  }, [planet, currentParam]);
 
-  }, [planet,currentParam])
-  
   const handleChange = (e) => {
     setView(e.target.value);
   };
-  
 
   return (
     <div className="planet-page">
-      <InnerNavMobile view={view} handleChange={handleChange} planetColor={planetData.color} />
+      <Navbar />
+      <InnerNavMobile
+        view={view}
+        handleChange={handleChange}
+        planetColor={planetData.color}
+      />
       <div className="top-container">
         <div className="image-container">
           {view === "overview" && (
@@ -118,13 +121,40 @@ const PlanetPage2 = () => {
             )}
           </div>
           <div className="buttons">
-            <button className="button" value="overview" style={view === "overview" ? {backgroundColor: planetData.color} : null}  onClick={handleChange}>
+            <button
+              className="button"
+              value="overview"
+              style={
+                view === "overview"
+                  ? { backgroundColor: planetData.color }
+                  : null
+              }
+              onClick={handleChange}
+            >
               <span>01</span> overview
             </button>
-            <button className="button" value="structure" style={view === "structure" ? {backgroundColor: planetData.color} : null} onClick={handleChange}>
+            <button
+              className="button"
+              value="structure"
+              style={
+                view === "structure"
+                  ? { backgroundColor: planetData.color }
+                  : null
+              }
+              onClick={handleChange}
+            >
               <span>02</span> internal structure
             </button>
-            <button className="button" value="geology" style={view === "geology" ? {backgroundColor: planetData.color} : null} onClick={handleChange}>
+            <button
+              className="button"
+              value="geology"
+              style={
+                view === "geology"
+                  ? { backgroundColor: planetData.color }
+                  : null
+              }
+              onClick={handleChange}
+            >
               <span>03</span> surface geology
             </button>
           </div>
