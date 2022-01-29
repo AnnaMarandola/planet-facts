@@ -241,49 +241,43 @@
     .planet-page {
         width: 70%; 
     }
-
     .top-container {
         display: flex;
         margin-top: 65px;
     }
-
     .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 65%;
     }
-
     .geo-picture {
         display: flex;
         flex-direction: column;
         width: 40%;
     }
-
     .planet-image {
         width: 50%;
         z-index: 1;
         animation-name: planet;
-        animation-duration: 1.8s;
-        animation-timing-function: fade-in;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
     }
-
     .geo-img {
         z-index: 2;
         margin-top: -5rem;
         width: 100%;
         transform: rotate(-0.06turn);
-        transition-duration: 1s;
+        transition-duration: 1.8s;
         transition-delay: .7s;
     }
-
     .right-container {
         width: 35%;
         padding: 2rem 0 0 2rem;
         .text,
         .planet-name {
             color: $pure-white;
-
+            
         }
         .text {
             font-family: "Spartan", sans-serif;
@@ -295,13 +289,16 @@
             font-family: "Antonio", sans-serif;
             text-transform: uppercase;
             font-size: 3.5rem;
-            line-height: 3rem;
+            line-height: 3.7rem;
+            display: inline-block;
+            white-space: pre-wrap;
+            overflow: hidden;
+            animation: typing 2.5s steps(50, end),blink .75s step-end infinite;   
         }
         .description {
             min-height: 19rem;
         }
     }
-
     .buttons {
         display: flex;
         flex-direction: column;
@@ -332,7 +329,6 @@
             border: solid 1px $turquoise;
         }
     }
-
     .bottom-container {
         display: flex;
         width: 100%;
@@ -340,7 +336,6 @@
         height: min-content;
         padding-bottom: 2.4rem;
     }
-
     .info {
         border: 1px solid $dark-grey;
         padding: 1rem 3rem 0 2rem;
@@ -361,8 +356,7 @@
         font-family: Antonio;
         font-weight: normal;
         font-size: 1.8rem;
-        line-height: 1.7rem;
-        // letter-spacing: -.5px;
+        line-height: 1.8rem;
         text-transform: uppercase;
         color: white;
         display: inline-block;
@@ -379,11 +373,11 @@
 }
 
 @keyframes typing {
-    from { 
-        width: 0% 
+    0% { 
+        width: 0% ;
     }
-    to { 
-        width: 100% 
+    100% { 
+        width: 100%;
     }
 }
 @keyframes blink {
@@ -394,3 +388,4 @@
         border-color: $pure-white; 
     }
 }
+    
