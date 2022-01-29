@@ -32,7 +32,7 @@ const PlanetPage2 = () => {
 
   return (
     <div className="planet-page">
-      <InnerNavMobile handleChange={handleChange} />
+      <InnerNavMobile view={view} handleChange={handleChange} planetColor={planetData.color} />
       <div className="top-container">
         <div className="image-container">
           {view === "overview" && (

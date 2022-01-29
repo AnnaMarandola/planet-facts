@@ -2,17 +2,27 @@
 
 
 
-.innernav-container-m {
+.innernav-container{
     display: flex;
     width: 100%;
     justify-content: space-around;
     border-bottom: 1px solid $dark-grey;
     height: 3rem;
 }
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.underlined {
+    width: 100%;
+    height: .8rem;
+}
+
 .inner-button-m {
     color: $pure-white;
-    padding: .5rem 0;
     background-color: transparent;
+    padding: 1rem 0;
     border: none;
     transition-duration: .4s;
     font-family: "Spartan", sans-serif;
@@ -23,18 +33,7 @@
     text-transform: uppercase;
     opacity: .8;
 }
-.inner-button-m:hover {
-    text-decoration-line: underline;
-    text-underline-offset: .8rem;
-    text-decoration-color: $light-grey;
-    text-decoration-thickness: .3rem;
-}
-.inner-button-m:focus {
-    text-decoration-line: underline;
-    text-underline-offset: .8rem;
-    text-decoration-color: $turquoise;
-    text-decoration-thickness: .3rem;
-}
+ 
 
 @media screen and (min-width: 600px) {
     .innernav-container-m {
