@@ -38,6 +38,10 @@
 }
 .cardTitle {
     text-align: center;
+    font-family: "Antonio", sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-shadow: $dark-blue 10px 0px 10px;
 }
 .content {
     opacity: 0;
@@ -48,5 +52,26 @@
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    text-shadow: $dark-blue 10px 0px 10px;
+}
+.cardButton {
+    padding: .8rem 4rem;
+    font-family: "Antonio", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: .3rem;
+    color: $pure-white;
+    background-color: transparent;
+    border: solid 1px $light-grey;
+    opacity: .7;
+    text-shadow: $dark-blue 10px 0 10px;
+}
+.cardButton:hover {
+    background-color: $light-grey;
+}
+.cardButton:focus {
+    background-color: transparent;
+    opacity: 1;
 }
 
