@@ -1,5 +1,26 @@
 @import "../styles/variables.scss";
 
+@media screen and (max-width: 600px) {
+    .homepage {
+        background-color: $dark-blue;
+        background-image: url("../images/background-stars.svg");
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .links-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
 .homepage {
     background-color: $dark-blue;
     background-image: url("../images/background-stars.svg");
@@ -15,4 +36,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
 }
