@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/MobileNav.scss";
-import planets from "../data.json";
+import planets from "../data/planetsData.json";
 import MENU from "../images/icon-hamburger.svg";
 import CHEVRON from "../images/icon-chevron.svg";
 import { useState } from "react";

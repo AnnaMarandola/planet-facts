@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 
-import data from "../data.json";
+import data from "../data/planetsData.json";
 import "../styles/PlanetPage.scss";
 import "../styles/InnerNavMobile.scss";
 import SOURCE from "../images/icon-source.svg";

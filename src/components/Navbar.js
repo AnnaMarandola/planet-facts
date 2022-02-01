@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/Navbar.scss";
-import planets from "../data.json";
+import planets from "../data/planetsData.json";
 
 const Navbar = () => {
   return (
