@@ -2,8 +2,6 @@
 
 @media screen and (max-width: 600px) {
     .homepage {
-        background-color: $dark-blue;
-        background-image: url("../images/background-stars.svg");
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -22,8 +20,6 @@
 @media screen and (min-width: 1200px) {
 
 .homepage {
-    background-color: $dark-blue;
-    background-image: url("../images/background-stars.svg");
     min-height: 100vh;
     display: flex;
     align-items: center;
